@@ -1,0 +1,22 @@
+teracy-dev:
+  extensions:
+
+    - _id: "entry-0"
+      path:
+        extension: teracy-dev-essential
+      location:
+        git: https://github.com/hoatle/teracy-dev-essential.git
+        branch: develop
+      require_version: ">= 0.1.0-SNAPSHOT"
+      enabled: true
+
+    - _id: "entry-1"
+      path:
+        extension: teracy-dev-k8s
+      location:
+        git: https://github.com/hoatle/teracy-dev-k8s.git
+        branch: develop
+        # tag:
+        # ref:
+      require_version: ">= 0.1.0-SNAPSHOT"
+      enabled: true
