@@ -86,3 +86,21 @@ Use it:
 $ kubectl config use-context admin-cluster.local
 $ kubectl cluster-info
 ```
+
+
+## Configuration Override
+
+To override default config, you need to create `workspace/teracy-dev-entry/config_override.yaml` to
+override the values from `teracy-dev-k8s/config_default.yaml`.
+
+For example:
+
+```yaml
+teracy-dev-k8s:
+  ansible:
+    mode: host
+    verbose: vv
+  vm_memory: 1600
+  vm_cpus: 4
+  num_instances: 3
+```
