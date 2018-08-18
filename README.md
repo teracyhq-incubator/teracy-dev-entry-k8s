@@ -31,16 +31,6 @@ $ cd ~/k8s-dev
 $ vagrant up
 ```
 
-When ansible reports that everything is ok, check it out:
-
-```bash
-$ cd ~/k8s-dev
-$ vagrant ssh
-$ kubectl cluster-info
-$ kubectl version
-$ kubectl get pods
-```
-
 If ansible is not running sucessfully, for example:
 
 ```bash
@@ -58,3 +48,8 @@ visible above. Please fix these errors and try again.
 ```
 
 You can retry with `$ vagrant reload --provision`
+
+
+## Accessing Kubernetes API
+
+See: https://github.com/teracyhq-incubator/teracy-dev-k8s#accessing-kubernetes-api
