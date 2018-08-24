@@ -6,30 +6,17 @@ k8s cluster in the cloud
 
 ## How to use
 
-- Clone `teracy-dev` project v0.6:
+- Clone `teracy-dev` v0.6 and init teracy-dev-entry to `vagrant up`:
 
 ```bash
 $ cd ~/
-$ git clone https://github.com/teracyhq/dev.git k8s-dev
+$ git clone https://github.com/teracyhq/dev.git -b develop k8s-dev
 $ cd k8s-dev
-$ git checkout develop
+$ TERACY_DEV_ENTRY_LOCATION_GIT=https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git \
+  TERACY_DEV_ENTRY_LOCATION_BRANCH=develop TERACY_DEV_ENTRY_LOCATION_SYNC=true \
+  vagrant up
 ```
 
-- Clone the `teracy-dev-entry-k8s` repo into the `workspace` directory:
-
-```
-$ cd ~/k8s-dev/workspace
-$ git clone https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git teracy-dev-entry
-$ cd teracy-dev-entry
-$ git checkout develop
-```
-
-- `$ vagrant up`:
-
-```
-$ cd ~/k8s-dev
-$ vagrant up
-```
 
 If ansible is not running sucessfully, for example:
 
