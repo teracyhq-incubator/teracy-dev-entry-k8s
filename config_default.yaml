@@ -1,8 +1,6 @@
 teracy-dev:
   # teracy-dev auto update
   location:
-    git: https://github.com/teracyhq/dev.git
-    branch: develop
     sync: true
 
   # teracy-dev-entry auto update
