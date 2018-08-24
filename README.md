@@ -6,7 +6,7 @@ k8s cluster in the cloud
 
 ## How to use
 
-- Clone `teracy-dev` v0.6 and init teracy-dev-entry to `vagrant up`:
+- Clone `teracy-dev` and init `teracy-dev-entry` to `vagrant up`:
 
 ```bash
 $ cd ~/
