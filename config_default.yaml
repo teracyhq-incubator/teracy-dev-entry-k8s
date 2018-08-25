@@ -1,6 +1,8 @@
 teracy-dev:
-  # teracy-dev auto update
+  # teracy-dev location specification
   location:
+    git: https://github.com/teracyhq/dev.git
+    branch: v0.6.0-a1
     sync: true
 
   # teracy-dev-entry auto update
@@ -25,9 +27,8 @@ teracy-dev:
         extension: teracy-dev-k8s
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-        branch: develop
+        branch: v0.1.0
         # tag:
         # ref:
-      require_version: ">= 0.1.0-SNAPSHOT"
+      require_version: ">= 0.1.0, < 0.2.0"
       enabled: true
-
