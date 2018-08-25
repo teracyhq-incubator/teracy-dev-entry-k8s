@@ -2,7 +2,7 @@ teracy-dev:
   # teracy-dev location specification
   location:
     git: https://github.com/teracyhq/dev.git
-    branch: branch
+    branch: develop
     sync: true
 
   # teracy-dev-entry auto update
@@ -12,6 +12,12 @@ teracy-dev:
     sync: true
 
   extensions:
+
+    # buggy: https://github.com/teracyhq/dev/issues/453
+    - _id: "0"
+      location: # auto download the extension into the lookup_path
+        git: https://github.com/teracyhq-incubator/teracy-dev-core.git
+        branch: develop
 
     - _id: "entry-0"
       path:
@@ -27,7 +33,7 @@ teracy-dev:
         extension: teracy-dev-k8s
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-        branch: v0.1.0
+        branch: develop
         # tag:
         # ref:
       require_version: ">= 0.1.0, < 0.2.0"
