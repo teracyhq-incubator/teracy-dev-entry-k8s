@@ -2,7 +2,7 @@ teracy-dev:
   # teracy-dev location specification
   location:
     git: https://github.com/teracyhq/dev.git
-    branch: v0.6.0-a1
+    branch: branch
     sync: true
 
   # teracy-dev-entry auto update
