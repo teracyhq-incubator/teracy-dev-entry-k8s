@@ -10,7 +10,7 @@ k8s cluster in the cloud
 
 ```bash
 $ cd ~/
-$ git clone https://github.com/teracyhq/dev.git -b develop k8s-dev
+$ git clone https://github.com/teracyhq/dev.git -b v0.6.0-a2 k8s-dev
 $ cd k8s-dev
 $ TERACY_DEV_ENTRY_LOCATION_GIT=https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git \
   TERACY_DEV_ENTRY_LOCATION_BRANCH=develop TERACY_DEV_ENTRY_LOCATION_SYNC=true \
