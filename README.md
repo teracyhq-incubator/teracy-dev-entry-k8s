@@ -34,7 +34,7 @@ visible above. Please fix these errors and try again.
 ==> k8s-01: The previous process exited with exit code 1.
 ```
 
-You can retry with `$ vagrant reload --provision`
+You can retry with `$ vagrant up --provision`
 
 
 ## Accessing Kubernetes API
