@@ -12,6 +12,11 @@ teracy-dev:
     sync: true
 
   extensions:
+    # use teracy-dev-core v0.2.0
+    - _id: "0"
+      location:
+        branch: v0.2.0
+      require_version: ">= 0.2.0"
 
     - _id: "entry-0"
       path:
