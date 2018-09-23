@@ -1,3 +1,11 @@
+vagrant:
+  plugins:
+    # install and enable vagrant-hostmanager plugin
+    - _id: "essential-0"
+      state: installed
+      enabled: true
+
+
 teracy-dev:
   # teracy-dev location specification
   location:
@@ -12,19 +20,19 @@ teracy-dev:
     sync: true
 
   extensions:
-    # use teracy-dev-core v0.2.0
+    # use teracy-dev-core v0.3.0-SNAPSHOT
     - _id: "0"
       location:
-        branch: v0.2.0
-      require_version: ">= 0.2.0"
+        branch: develop
+      require_version: ">= 0.3.0-SNAPSHOT"
 
     - _id: "entry-0"
       path:
         extension: teracy-dev-essential
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-essential.git
-        branch: develop
-      require_version: ">= 0.1.0-SNAPSHOT"
+        branch: v0.1.0
+      require_version: ">= 0.1.0"
       enabled: true
 
     - _id: "entry-1"
@@ -33,5 +41,5 @@ teracy-dev:
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
         branch: v0.1.0
-      require_version: ">= 0.1.0, < 0.2.0"
+      require_version: ">= 0.1.0"
       enabled: true
