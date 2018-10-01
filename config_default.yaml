@@ -55,4 +55,3 @@ nodes:
         options:
           aliases: # set domain aliases for the master node
             - k8s.local
-            - auth.k8s.local
