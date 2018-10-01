@@ -43,3 +43,16 @@ teracy-dev:
         branch: v0.1.0
       require_version: ">= 0.1.0"
       enabled: true
+
+
+nodes:
+  - _id: "0"
+    plugins:
+      - _id: "entry-0"
+        name: vagrant-hostmanager
+        config_key: hostmanager
+        enabled: true
+        options:
+          aliases: # set domain aliases for the master node
+            - k8s.local
+            - auth.k8s.local

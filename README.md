@@ -40,3 +40,14 @@ You can retry with `$ vagrant up --provision`
 ## Accessing Kubernetes API
 
 See: https://github.com/teracyhq-incubator/teracy-dev-k8s#accessing-kubernetes-api
+
+
+## Domain Aliases
+
+To create domain alisases for the master node, override the default values from:
+
+```
+          aliases: # set domain aliases for the master node
+            - k8s.local
+            - auth.k8s.local
+```
