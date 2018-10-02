@@ -74,3 +74,6 @@ nodes:
             - service.teracy.local
             - my.example.com
 ```
+
+As nginx ingress is enabled by default, you can use the domain aliases above with the nginx ingress
+configuration to access the provided services from the cluster.
