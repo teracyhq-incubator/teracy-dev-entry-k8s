@@ -40,8 +40,8 @@ teracy-dev:
         extension: teracy-dev-k8s
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-        branch: v0.1.0
-      require_version: ">= 0.1.0"
+        branch: develop
+      require_version: ">= 0.2.0-SNAPSHOT"
       enabled: true
 
 
