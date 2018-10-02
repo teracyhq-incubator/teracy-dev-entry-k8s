@@ -10,7 +10,7 @@ k8s cluster in the cloud
 
 ```bash
 $ cd ~/
-$ git clone https://github.com/teracyhq/dev.git -b v0.6.0-a2 k8s-dev
+$ git clone https://github.com/teracyhq/dev.git -b v0.6.0-a4 k8s-dev
 $ cd k8s-dev
 $ TERACY_DEV_ENTRY_LOCATION_GIT=https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git \
   TERACY_DEV_ENTRY_LOCATION_BRANCH=develop TERACY_DEV_ENTRY_LOCATION_SYNC=true \
@@ -44,10 +44,33 @@ See: https://github.com/teracyhq-incubator/teracy-dev-k8s#accessing-kubernetes-a
 
 ## Domain Aliases
 
-To create domain alisases for the master node, override the default values from:
+To create domain alisases for the master node, override the default values from the
+`config_default.yaml` file:
 
-```
+```yaml
+nodes:
+  - _id: "0"
+    plugins:
+      - _id: "entry-0"
+        name: vagrant-hostmanager
+        config_key: hostmanager
+        enabled: true
+        options:
           aliases: # set domain aliases for the master node
             - k8s.local
-            - auth.k8s.local
+```
+
+with your preferred domain aliases on the `config_override.yaml` file, for example:
+
+```yaml
+nodes:
+  - _id: "0"
+    plugins:
+      - _id: "entry-0"
+        options:
+          aliases: # set domain aliases for the master node
+            - teracy.local
+            - auth.teracy.local
+            - service.teracy.local
+            - my.example.com
 ```
