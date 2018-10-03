@@ -45,7 +45,6 @@ teracy-dev:
       enabled: true
 
 
-
 nodes:
   - _id: "0"
     plugins:
@@ -57,8 +56,10 @@ nodes:
           aliases: # set domain aliases for the master node
             - k8s.local
 
+
 teracy-dev-k8s:
   ansible:
     host_vars:
-      # Nginx ingress controller deployment
-      ingress_nginx_enabled: true
+      ingress_nginx_enabled: "True"
+      helm_enabled: "True"
+      helm_version: v2.11.0
