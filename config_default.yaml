@@ -23,8 +23,8 @@ teracy-dev:
     # use teracy-dev-core v0.3.0-SNAPSHOT
     - _id: "0"
       location:
-        branch: develop
-      require_version: ">= 0.3.0-SNAPSHOT"
+        branch: v0.3.0
+      require_version: ">= 0.3.0"
 
     - _id: "entry-0"
       path:
@@ -40,8 +40,8 @@ teracy-dev:
         extension: teracy-dev-k8s
       location:
         git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-        branch: develop
-      require_version: ">= 0.2.0-SNAPSHOT"
+        branch: v0.2.0
+      require_version: ">= 0.2.0"
       enabled: true
 
 
