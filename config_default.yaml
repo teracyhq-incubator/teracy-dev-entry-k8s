@@ -20,7 +20,7 @@ teracy-dev:
     sync: true
 
   extensions:
-    # use teracy-dev-core v0.3.0-SNAPSHOT
+    # use teracy-dev-core v0.3.0
     - _id: "0"
       location:
         branch: v0.3.0

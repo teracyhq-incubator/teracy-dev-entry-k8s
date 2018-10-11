@@ -75,5 +75,20 @@ nodes:
             - my.example.com
 ```
 
+or by appending more domain aliases:
+
+
+```yaml
+nodes:
+  - _id: "0"
+    plugins:
+      - _id: "entry-0"
+        options:
+          _ua_aliases:
+            - auth.k8s.local
+            - login.k8s.local
+```
+
+
 As nginx ingress is enabled by default, you can use the domain aliases above with the nginx ingress
 configuration to access the provided services from the cluster.
