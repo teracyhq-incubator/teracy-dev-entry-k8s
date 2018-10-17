@@ -4,6 +4,11 @@ A convenient teracy-dev-entry with default extensions to setup a local k8s clust
 k8s cluster in the cloud
 
 
+## Prerequisites
+
+- `vagrant` and `virtualbox` should be installed, follow: https://github.com/teracyhq/dev/blob/develop/docs/getting_started.rst
+
+
 ## How to use
 
 - Clone `teracy-dev` and init `teracy-dev-entry` to `vagrant up`:
