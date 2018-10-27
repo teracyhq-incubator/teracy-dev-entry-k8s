@@ -1,3 +1,8 @@
+variables:
+  node_name_prefix: ${NODE_NAME_PREFIX:-k8s}
+  node_hostname_prefix: ${NODE_HOSTNAME_PREFIX:-k8s}
+
+
 vagrant:
   plugins:
     # install and enable vagrant-hostmanager plugin
@@ -9,29 +14,36 @@ vagrant:
 teracy-dev:
   # teracy-dev location specification
   location:
-    git: https://github.com/teracyhq/dev.git
-    branch: develop
+    git:
+      remote:
+        origin: https://github.com/teracyhq/dev.git
+      branch: develop
     sync: true
 
   # teracy-dev-entry auto update
   entry_location:
-    git: https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git
-    branch: develop
+    git:
+      remote:
+        origin: https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git
+      branch: develop
     sync: true
 
   extensions:
-    # use teracy-dev-core v0.3.0
+    # use teracy-dev-core v0.4.0
     - _id: "0"
       location:
-        branch: v0.3.0
-      require_version: ">= 0.3.0"
+        git:
+          branch: develop
+      require_version: ">= 0.4.0-SNAPSHOT"
 
     - _id: "entry-0"
       path:
         extension: teracy-dev-essential
       location:
-        git: https://github.com/teracyhq-incubator/teracy-dev-essential.git
-        branch: v0.1.0
+        git:
+          remote:
+            origin: https://github.com/teracyhq-incubator/teracy-dev-essential.git
+          branch: v0.1.0
       require_version: ">= 0.1.0"
       enabled: true
 
@@ -39,9 +51,22 @@ teracy-dev:
       path:
         extension: teracy-dev-k8s
       location:
-        git: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-        branch: v0.2.0
+        git:
+          remote:
+            origin: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
+          branch: v0.2.0
       require_version: ">= 0.2.0"
+      enabled: true
+
+    - _id: "entry-certs"
+      path:
+        extension: teracy-dev-certs
+      location:
+        git:
+          remote:
+            origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
+          branch: develop
+      require_version: ">= 0.1.0-SNAPSHOT"
       enabled: true
 
 
@@ -54,8 +79,7 @@ nodes:
         enabled: true
         options:
           aliases: # set domain aliases for the master node
-            - k8s.local
-
+            - "%{node_hostname_prefix}.%{node_domain_affix}"
 
 teracy-dev-k8s:
   ansible:
