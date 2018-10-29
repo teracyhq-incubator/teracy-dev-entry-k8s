@@ -4,6 +4,11 @@ A convenient teracy-dev-entry with default extensions to setup a local k8s clust
 k8s cluster in the cloud
 
 
+## Prerequisites
+
+- `vagrant` and `virtualbox` should be installed, follow: https://github.com/teracyhq/dev/blob/develop/docs/getting_started.rst
+
+
 ## How to use
 
 - Clone `teracy-dev` and init `teracy-dev-entry` to `vagrant up`:
@@ -74,6 +79,21 @@ nodes:
             - service.teracy.local
             - my.example.com
 ```
+
+or by appending more domain aliases:
+
+
+```yaml
+nodes:
+  - _id: "0"
+    plugins:
+      - _id: "entry-0"
+        options:
+          _ua_aliases:
+            - auth.k8s.local
+            - login.k8s.local
+```
+
 
 As nginx ingress is enabled by default, you can use the domain aliases above with the nginx ingress
 configuration to access the provided services from the cluster.
