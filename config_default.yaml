@@ -30,13 +30,14 @@ teracy-dev:
 
   extensions:
     # use teracy-dev-core v0.4.0
-    - _id: "0"
+    - _id: "kernel-core"
       location:
         git:
           branch: develop
       require_version: ">= 0.4.0-SNAPSHOT"
 
-    - _id: "entry-0"
+    - _id: "entry-essential"
+      _id_deprecated: "entry-0"
       path:
         extension: teracy-dev-essential
       location:
@@ -47,15 +48,16 @@ teracy-dev:
       require_version: ">= 0.1.0"
       enabled: true
 
-    - _id: "entry-1"
+    - _id: "entry-k8s"
+      _id_deprecated: "entry-1"
       path:
         extension: teracy-dev-k8s
       location:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-          branch: v0.2.0
-      require_version: ">= 0.2.0"
+          branch: develop
+      require_version: ">= 0.3.0-SNAPSHOT"
       enabled: true
 
     - _id: "entry-certs"
@@ -73,7 +75,8 @@ teracy-dev:
 nodes:
   - _id: "0"
     plugins:
-      - _id: "entry-0"
+      - _id: "entry-hostmanager"
+        _id_deprecated: "entry-0"
         name: vagrant-hostmanager
         config_key: hostmanager
         enabled: true
