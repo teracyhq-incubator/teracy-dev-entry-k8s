@@ -17,7 +17,7 @@ teracy-dev:
     git:
       remote:
         origin: https://github.com/teracyhq/dev.git
-      branch: develop
+      branch: v0.6.0-a5
     sync: true
 
   # teracy-dev-entry auto update
@@ -33,8 +33,8 @@ teracy-dev:
     - _id: "kernel-core"
       location:
         git:
-          branch: develop
-      require_version: ">= 0.4.0-SNAPSHOT"
+          branch: v0.4.0
+      require_version: ">= 0.4.0"
 
     - _id: "entry-essential"
       _id_deprecated: "entry-0"
