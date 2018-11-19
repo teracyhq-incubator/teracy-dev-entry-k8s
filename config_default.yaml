@@ -48,6 +48,17 @@ teracy-dev:
       require_version: ">= 0.1.0"
       enabled: true
 
+    - _id: "entry-certs"
+      path:
+        extension: teracy-dev-certs
+      location:
+        git:
+          remote:
+            origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
+          branch: v0.1.0
+      require_version: ">= 0.1.0"
+      enabled: true
+
     - _id: "entry-k8s"
       _id_deprecated: "entry-1"
       path:
@@ -58,17 +69,6 @@ teracy-dev:
             origin: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
           branch: develop
       require_version: ">= 0.3.0-SNAPSHOT"
-      enabled: true
-
-    - _id: "entry-certs"
-      path:
-        extension: teracy-dev-certs
-      location:
-        git:
-          remote:
-            origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
-          branch: develop
-      require_version: ">= 0.1.0-SNAPSHOT"
       enabled: true
 
 
