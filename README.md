@@ -97,3 +97,17 @@ nodes:
 
 As nginx ingress is enabled by default, you can use the domain aliases above with the nginx ingress
 configuration to access the provided services from the cluster.
+
+
+## Certificates
+
+To configure self-signed certificates, please follow https://github.com/teracyhq-incubator/teracy-dev-certs#configuration-reference
+
+For example, you add the following line into the `teracy-dev-entry/config_override.yaml` file:
+
+```
+teracy-dev-certs:
+  alt_names:
+    - "accounts.%{node_hostname_prefix}.%{node_domain_affix}"
+    - "login.%{node_hostname_prefix}.%{node_domain_affix}"
+```
