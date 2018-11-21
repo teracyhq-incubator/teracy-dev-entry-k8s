@@ -55,8 +55,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
-          branch: v0.1.0
-      require_version: ">= 0.1.0"
+          branch: develop
+      require_version: ">= 0.2.0-SNAPSHOT"
       enabled: true
 
     - _id: "entry-k8s"
@@ -86,6 +86,7 @@ nodes:
 
 teracy-dev-k8s:
   ansible:
+    version: latest
     host_vars:
       ingress_nginx_enabled: "True"
       helm_enabled: "True"
