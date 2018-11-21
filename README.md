@@ -90,8 +90,8 @@ nodes:
       - _id: "entry-hostmanager"
         options:
           _ua_aliases:
-            - auth.k8s.local
-            - login.k8s.local
+            - "auth.%{node_hostname_prefix}.%{node_domain_affix}"
+            - "login.%{node_hostname_prefix}.%{node_domain_affix}"
 ```
 
 
