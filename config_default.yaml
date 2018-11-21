@@ -55,8 +55,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
-          branch: develop
-      require_version: ">= 0.2.0-SNAPSHOT"
+          branch: v0.2.0
+      require_version: ">= 0.2.0"
       enabled: true
 
     - _id: "entry-k8s"
