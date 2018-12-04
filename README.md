@@ -6,7 +6,9 @@ k8s cluster in the cloud
 
 ## Prerequisites
 
-- `vagrant` and `virtualbox` should be installed, follow: https://github.com/teracyhq/dev/blob/develop/docs/getting_started.rst
+- Remember to skip this step: http://dev.teracy.org/docs/getting_started.html#teracy-dev-git-clone-and-vagrant-up
+
+- Install Vagrant (>=2.1.0), VirtualBox (>=5.2) by following this guide http://dev.teracy.org/docs/getting_started.html.
 
 
 ## How to use
@@ -18,7 +20,7 @@ $ cd ~/
 $ git clone https://github.com/teracyhq/dev.git -b v0.6.0-a5 k8s-dev
 $ cd k8s-dev
 $ TERACY_DEV_ENTRY_LOCATION_GIT_REMOTE_ORIGIN=https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git \
-  TERACY_DEV_ENTRY_LOCATION_GIT_BRANCH=develop TERACY_DEV_ENTRY_LOCATION_SYNC=true \
+  TERACY_DEV_ENTRY_LOCATION_GIT_BRANCH=master TERACY_DEV_ENTRY_LOCATION_SYNC=true \
   vagrant up
 ```
 
@@ -110,4 +112,20 @@ teracy-dev-certs:
   alt_names:
     - "accounts.%{node_hostname_prefix}.%{node_domain_affix}"
     - "login.%{node_hostname_prefix}.%{node_domain_affix}"
+```
+
+## How to develop
+
+By default, the "master" branch is always synced. To develop, we must create and configure the `teracy-dev-entry/config_override.yaml` file, for example:
+
+
+```
+teracy-dev:
+
+  entry_location:
+    git:
+      remote:
+        origin: git@github.com:hoatle/teracy-dev-entry-k8s.git # your forked repo
+        upstream: git@github.com:teracyhq-incubator/teracy-dev-entry-k8s.git
+    sync: false # you must update the repo manually
 ```

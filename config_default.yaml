@@ -25,7 +25,7 @@ teracy-dev:
     git:
       remote:
         origin: https://github.com/teracyhq-incubator/teracy-dev-entry-k8s.git
-      branch: develop
+      branch: master
     sync: true
 
   extensions:
@@ -65,8 +65,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-k8s.git
-          branch: develop
-      require_version: ">= 0.3.0-SNAPSHOT"
+          branch: v0.3.0
+      require_version: ">= 0.3.0"
       enabled: true
 
 
