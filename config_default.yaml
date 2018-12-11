@@ -6,7 +6,7 @@ variables:
 vagrant:
   plugins:
     # install and enable vagrant-hostmanager plugin
-    - _id: "essential-0"
+    - _id: "essential-hostmanager"
       state: installed
       enabled: true
 
