@@ -114,6 +114,20 @@ teracy-dev-certs:
     - "login.%{node_hostname_prefix}.%{node_domain_affix}"
 ```
 
+## How to use the latest develop branch with bleeding edge updates
+
+By default, the stable master branch is always synced. To use the develop branch, we must add the following
+config to the `teracy-dev-entry/config_override.yaml` file, for example:
+
+
+```yaml
+teracy-dev:
+
+  entry_location:
+    git:
+      branch: develop
+```
+
 ## How to develop
 
 By default, the "master" branch is always synced. To develop, we must create and configure the `teracy-dev-entry/config_override.yaml` file, for example:

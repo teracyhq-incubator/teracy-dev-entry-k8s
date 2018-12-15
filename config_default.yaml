@@ -6,7 +6,7 @@ variables:
 vagrant:
   plugins:
     # install and enable vagrant-hostmanager plugin
-    - _id: "essential-0"
+    - _id: "essential-hostmanager"
       state: installed
       enabled: true
 
@@ -43,8 +43,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-essential.git
-          branch: v0.1.0
-      require_version: ">= 0.1.0"
+          branch: v0.2.0
+      require_version: ">= 0.2.0"
       enabled: true
 
     - _id: "entry-certs"
@@ -54,8 +54,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
-          branch: v0.2.0
-      require_version: ">= 0.2.0"
+          branch: v0.3.0
+      require_version: ">= 0.3.0"
       enabled: true
 
     - _id: "entry-k8s"
