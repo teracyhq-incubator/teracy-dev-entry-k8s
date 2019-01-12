@@ -87,4 +87,8 @@ teracy-dev-k8s:
     host_vars:
       ingress_nginx_enabled: "True"
       helm_enabled: "True"
-      helm_version: v2.11.0
+      helm_version: v2.12.1
+      disable_ipv6_dns: "True"
+      kube_proxy_mode: iptables
+      kube_service_addresses: 10.96.0.0/16
+      kube_pods_subnet: 10.244.0.0/16
