@@ -86,4 +86,4 @@ teracy-dev-k8s:
     host_vars:
       ingress_nginx_enabled: "True"
       helm_enabled: "True"
-      helm_version: v2.11.0
+      helm_version: v2.12.2
