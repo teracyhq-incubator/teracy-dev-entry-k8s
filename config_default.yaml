@@ -2,7 +2,6 @@ variables:
   node_name_prefix: ${NODE_NAME_PREFIX:-k8s}
   node_hostname_prefix: ${NODE_HOSTNAME_PREFIX:-k8s}
 
-
 vagrant:
   plugins:
     # install and enable vagrant-hostmanager plugin
@@ -10,14 +9,13 @@ vagrant:
       state: installed
       enabled: true
 
-
 teracy-dev:
   # teracy-dev location specification
   location:
     git:
       remote:
         origin: https://github.com/teracyhq/dev.git
-      branch: v0.6.0-a5
+      branch: v0.6.0-a8
     sync: true
 
   # teracy-dev-entry auto update
@@ -43,8 +41,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-essential.git
-          branch: v0.2.0
-      require_version: ">= 0.2.0"
+          branch: v0.4.0
+      require_version: ">= 0.4.0"
       enabled: true
 
     - _id: "entry-certs"
@@ -54,8 +52,8 @@ teracy-dev:
         git:
           remote:
             origin: https://github.com/teracyhq-incubator/teracy-dev-certs.git
-          branch: v0.3.0
-      require_version: ">= 0.3.0"
+          branch: v0.4.0
+      require_version: ">= 0.4.0"
       enabled: true
 
     - _id: "entry-k8s"
@@ -68,7 +66,6 @@ teracy-dev:
           branch: develop
       require_version: ">= 0.4.0-SNAPSHOT"
       enabled: true
-
 
 nodes:
   - _id: "0"
